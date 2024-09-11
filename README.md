@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<title>I am DkXenos</title>
 
   <body>
   <h1>My name is DkXenos</h1>

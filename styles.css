@@ -1,0 +1,6 @@
+.Hello{
+    color: aquamarine;
+}
+.Hello:hover{
+    color: red;
+}

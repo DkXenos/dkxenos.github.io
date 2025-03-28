@@ -1,0 +1,189 @@
+/* ===== Base Styles ===== */
+:root {
+    --primary: #61277b;
+    --primary-shade:#b476d1;
+    --secondary: #4a4a8a;
+    --accent: #a5a5e0;
+    --light-bg: #f8f9fa;
+    --text-dark: #2d3748;
+    --text-light: #718096;
+    --card-bg: #ffffff;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --dark-bg:#474747;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--primary-shade);
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll; /* Always show vertical scrollbar */
+    overflow-x: hidden; /* Prevent unwanted horizontal scroll */
+    min-height: 100vh;
+
+}
+
+/* ===== Navigation ===== */
+.navBar {
+    background: var(--primary);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navBar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+}
+
+.navBar a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.navBar a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== About Section ===== */
+.aboutImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.pfp {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    overflow: hidden;
+    border: 4px solid var(--accent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pfp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about p {
+    background-color: var(--card-bg);
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 3px solid var(--accent);
+    transition: all 0.3s ease;
+}
+.about p:hover{
+    background-color: var(--accent);
+    color: var(--light-bg);
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 3px solid var(--secondary);
+}
+
+/* ===== Video Section ===== */
+.title {
+    text-align: center;
+    margin: 4rem auto;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.title h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.title p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.video {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Changed from max-width */
+    margin: 0 auto;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+
+.video table {
+    width: auto; /* Let table expand naturally */
+    border-collapse: collapse;
+    display: inline-table; /* Better for scrolling */
+}
+
+.video td {
+    padding: 0 0.5rem; /* Spacing between GIFs */
+    vertical-align: middle;
+}
+
+.video img {
+    width: auto; /* Changed from 100% */
+    max-height: 300px; /* Control height */
+    border-radius: 4px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.video img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .aboutImage {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .pfp {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .navBar ul {
+        gap: 0.5rem;
+    }
+    
+    .navBar a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+}
